@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Make Prediction</h1>
+    <div class="main">
+        <form method="POST" id="" action="{{url_for('form')}}">
+            <div class="for-label">
+                <label for="name">Compactness Mean</label>
+                <input type="text" name="compactness_mean">
+            </div>
+            <div class="for-label">
+                <label for="name">Concavitiy Mean</label>
+                <input type="text" name="concavity_mean">
+            </div>
+            <div class="for-label">
+                <label for="name">Concave Points Mean</label>
+                <input type="text" name="concave points_mean">
+            </div>
+            <div class="for-label">
+                <label for="name">Symmetry Mean</label>
+                <input type="text" name="symmetry_mean">
+            </div>
+            <div class="for-label">
+                <label for="name">Fractal Dimension Mean</label>
+                <input type="text" name="fractal_dimension_mean">
+            </div>
+            <div class="for-label">
+                <label for="name">Texture Standard Error</label>
+                <input type="text" name="texture_se">
+            </div>
+            <div class="for-label">
+                <label for="name">Symmetry Standard Error</label>
+                <input type="text" name="symmetry_se">
+            </div>
+            <div class="for-label">
+                <label for="name">Texture Worst</label>
+                <input type="text" name="texture_worst">
+            </div>
+            <div class="for-label">
+                <label for="name">Area Worst</label>
+                <input type="text" name="area_worst">
+            </div>
+            <div class="for-label">
+                <label for="name">Compactness Worst</label>
+                <input type="text" name="compactness_worst">
+            </div>
+            <div class="for-label">
+                <label for="name">Concavity Worst</label>
+                <input type="text" name="concavity_worst">
+            </div>
+            <input type="submit" class="submit">
+            <h1>Prediction is {{prediction}}</h1>
+        </form>
+    </div>
+</body>
+</html>
